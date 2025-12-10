@@ -1,7 +1,7 @@
 import streamlit as st
-import prediction as pred  # Memanggil file prediction.py kita tadi
+import prediction as pred 
 
-# Judul Halaman
+
 st.set_page_config(page_title="Mental Health Prediction", page_icon="🧠")
 st.title("🧠 Prediksi Kesehatan Mental Mahasiswa")
 st.divider()
@@ -39,7 +39,7 @@ age_input = st.sidebar.number_input(
 # --- TOMBOL PREDIKSI ---
 if st.button("🚀 Prediksi Sekarang"):
     
-    # Bungkus data jadi dictionary biar rapi dikirim ke prediction.py
+    # Bungkus data jadi dictionary 
     user_data = {
         'Course': course_input,
         'CGPA': cgpa_input,
@@ -60,4 +60,5 @@ if st.button("🚀 Prediksi Sekarang"):
         st.write("Kondisi mahasiswa diprediksi stabil.")
 
 else:
+
     st.info("Silakan masukkan data di sidebar dan tekan tombol prediksi.")
