@@ -2,8 +2,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# 1. Bikin Data Dummy (Representasi dari Project Kamu)
-# Kita bikin pola sederhana: CS + Low Support = Stres (1)
+# 1. Bikin Data Dummy 
 data = {
     'Course':           [0, 0, 1, 1, 2, 2, 3, 4, 5, 0], # 0:CS, 1:Engineering, dst
     'CGPA':             [3.8, 2.5, 3.9, 2.6, 3.5, 3.2, 3.0, 3.8, 3.5, 2.4],
@@ -15,7 +14,6 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Keterangan Mapping (Biar kamu tau urutannya):
 # Course: 0:Computer Science, 1:Engineering, 2:Business, 3:Law, 4:Medical, 5:Others
 # Gender: 0:Female, 1:Male
 # Social_Support: 0:Low, 1:Moderate, 2:High
@@ -30,5 +28,6 @@ model.fit(X, y)
 
 # 4. Simpan Model jadi File .pkl
 joblib.dump(model, 'mental_health_model.pkl')
+
 
 print("✅ Model berhasil dibuat dan disimpan sebagai 'mental_health_model.pkl'")
